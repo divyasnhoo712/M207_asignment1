@@ -1,1 +1,26 @@
+#include <iostream>
 
+using namespace std;
+
+int GCD(long a, long b)
+{
+	if (b==0)
+		return a;
+	return GCD(b,a%b);
+};
+
+int main()
+{
+	long x,y;
+	cout<<"enter two integers"<<endl;
+	cout<<"first integer:";cin>>x;
+	cout<<endl<<"second integer:";cin>>y;
+	if(y > x )
+	{
+		int z = x;
+		x=y;
+		y=z;
+	};
+	cout<<endl<<"GCD of numbers "<<x<<" and "<<y<<" is "<<GCD(x,y);
+    return 0;
+};
